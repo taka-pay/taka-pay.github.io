@@ -16,7 +16,29 @@ body {
 </style>
 
 <div style="background: linear-gradient(#156092,#14537B); ;padding:20px 50px 40px 50px ; color:#fff; ">
-<b><font style="font-size:40px"><center>利用明細</center></b></font><br>
+<b><font style="font-size:40px"><center>利用明細</center></b></font>
+
+<script>
+    function twoDigit(num) {
+      let ret;
+      if( num < 10 ) 
+        ret = "0" + num; 
+      else 
+        ret = num; 
+      return ret;
+    }
+    function showClock() {
+      let nowTime = new Date();
+      let nowHour = twoDigit( nowTime.getHours() );
+      let nowMin  = twoDigit( nowTime.getMinutes() );
+      let nowSec  = twoDigit( nowTime.getSeconds() );
+      let msg = "最終更新 " + nowHour + ":" + nowMin;
+      document.getElementById("realtime").innerHTML = msg;
+    }
+    setInterval('showClock()',1000);
+  </script>
+
+  <p id="realtime"></p>
 
 
 <table style="width:100%; color:white;">
