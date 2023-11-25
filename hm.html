@@ -1,0 +1,257 @@
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@500&family=M+PLUS+Rounded+1c&family=Shippori+Antique+B1&display=swap" rel="stylesheet">
+<link href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/reset.css" rel="stylesheet">
+  <link href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/4-1-4/css/4-1-4.css" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+<font size="5" face="sans-serif">
+<title>TakaPay</title>
+<body link="#b96c6c" vlink="#b96c6c">
+
+<div id=pagetop></div>
+<style type="text/css">
+body {
+   margin: 0;
+   padding: 0;
+  
+}
+</style>
+
+<div id="splash" style="background:white;">
+    <div id="splash_logo">
+      <img src="https://taka-pay.github.io/A0CF97D3-8E35-4E82-B98E-03F4A4C2DC31.png" alt="" class="fadeUp">
+    </div>
+  </div>
+
+
+
+<div style="background: linear-gradient(#156092,#14537B); ;padding:20px 50px 40px 50px ; color:#fff; ">
+<b><font style="font-size:40px"><center>利用明細</center></b></font>
+
+<p style="position: absolute; top:20px; right:30px;"><span id="js-show-popup" style="font-size:60px" class="material-icons">
+notifications
+</span>
+
+
+<div class="popup" id="js-popup">
+  <div class="popup-inner">
+  
+<div style="padding:30px">
+<font color="black" style="font-size:40px"><b>お知らせ</b></div>
+<div style="background:#E2F2FC; padding:30px;"><font style="font-size:30px">
+お知らせはありません。</font><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></font>
+</div>
+
+  </div>
+  <div class="black-background" id="js-black-bg"></div>
+</div>
+
+
+
+<style>
+.popup {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: .6s;
+}
+.popup.is-show {
+  opacity: 1;
+  visibility: visible;
+}
+.popup-inner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 90%;
+  
+ 
+  background-color: #fff;
+  z-index: 2;
+}
+.popup-inner img {
+  width: 100%;
+}
+.close-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  cursor: pointer;
+}
+.close-btn i {
+  font-size: 20px;
+  color: #333;
+}
+.black-background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.4);
+  z-index: 1;
+  cursor: pointer;
+}
+</style>
+<script>
+function popupImage() {
+  var popup = document.getElementById('js-popup');
+  if(!popup) return;
+
+  var blackBg = document.getElementById('js-black-bg');
+  var closeBtn = document.getElementById('js-close-btn');
+  var showBtn = document.getElementById('js-show-popup');
+
+  closePopUp(blackBg);
+  closePopUp(closeBtn);
+  closePopUp(showBtn);
+  function closePopUp(elem) {
+    if(!elem) return;
+    elem.addEventListener('click', function() {
+      popup.classList.toggle('is-show');
+    });
+  }
+}
+popupImage();
+</script>
+
+
+</p>
+
+<script>
+    function twoDigit(num) {
+      let ret;
+      if( num < 10 ) 
+        ret = "0" + num; 
+      else 
+        ret = num; 
+      return ret;
+    }
+    function showClock() {
+      let nowTime = new Date();
+      let nowHour = twoDigit( nowTime.getHours() );
+      let nowMin  = twoDigit( nowTime.getMinutes() );
+      let nowSec  = twoDigit( nowTime.getSeconds() );
+      let msg = "最終更新 " + nowHour + ":" + nowMin;
+      document.getElementById("realtime").innerHTML = msg;
+    }
+    setInterval('showClock()',1000);
+  </script>
+
+  <p id="realtime"></p><br>
+
+
+<table style="width:100%; color:white;">
+	<tbody>
+		<tr>
+			<td width="10px"><img style="padding:12px; background:#fff; border-radius:20px; width:90px" src="https://taka-pay.github.io/07DCF95B-D7D7-4580-BB14-8B4C7C31CE38.png"></td>
+			<td style="text-align:left; font-size:35px; padding:0px 20px;"><b> TakaPay<br> B235A****  ﾓﾘ** ﾊ** 様</b></td>
+		</tr>
+	</tbody>
+</table>
+
+
+<br>
+<font style="font-size:30px">
+TakaPay残高<br>
+<font style="font-size:80px"><b>-820</b></font> 円<div style="padding:5px"></div><hr><div style="padding:5px"></div>利用可能額 3,000 円</div></font>
+
+
+<div style="border: 3px solid #14537B; border-radius:20px; margin:30px; padding:10px 30px; "><table width="100%" style="font-size:30px;color:#333; ">
+	<tbody>
+		<tr>
+			<td><b>タカペイポイント獲得総額</b></td>
+			<td style="text-align:right"><font style="font-size:50px"><b>0</b></font> 円（還元率 0.11 %）</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+
+<div style="background: #eee; ;padding:10px 50px 10px 50px ; color:#888; font-size:30px;"><b>
+2023.11</b></div>
+
+
+<div style="padding:30px 50px">
+
+<table style="width:100%; font-size:40px">
+	<tbody>
+		<tr>
+			<td>ﾆｭｳｷﾝ</td>
+			<td style="text-align:right"><b><font color="darkred">＋</font> 4,500円</b></td>
+		</tr>
+		<tr>
+			<td style="font-size:30px; color:gray">23.11.07</td>
+			<td style="text-align:right; font-size:30px; color:gray"">残高 4,500円</td>
+		</tr>
+	</tbody>
+</table>
+
+<div style="padding:20px 0px;">
+<hr></div>
+
+<table style="width:100%; font-size:40px">
+<tbody>
+		<tr>
+			<td>ﾀｶﾍﾟｲﾎﾟｲﾝﾄｶﾝｹﾞﾝ</td>
+			<td style="text-align:right"><b><font color="darkred">＋</font> 500円</b></td>
+		</tr>
+		<tr>
+			<td style="font-size:30px; color:gray">23.11.07</td>
+			<td style="text-align:right; font-size:30px; color:gray"">残高 5,000円</td>
+		</tr>
+	</tbody>
+</table>
+
+<div style="padding:20px 0px;">
+<hr></div>
+
+<table style="width:100%; font-size:40px">
+<tbody>
+		<tr>
+			<td>ｺﾞﾘﾖｳ</td>
+			<td style="text-align:right"><b><font color="darkblue">−</font> 1,000円</b></td>
+		</tr>
+		<tr>
+			<td style="font-size:30px; color:gray">23.11.19</td>
+			<td style="text-align:right; font-size:30px; color:gray"">残高 4,000円</td>
+		</tr>
+	</tbody>
+</table>
+
+<div style="padding:20px 0px;">
+<hr></div>
+
+<table style="width:100%; font-size:40px">
+<tbody>
+		<tr>
+			<td>ｺﾞﾘﾖｳ</td>
+			<td style="text-align:right"><b><font color="darkblue">−</font> 1,000円</b></td>
+		</tr>
+		<tr>
+			<td style="font-size:30px; color:gray">23.11.22</td>
+			<td style="text-align:right; font-size:30px; color:gray"">残高 3,000円</td>
+		</tr>
+	</tbody>
+</table>
+
+
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/4-1-4/js/4-1-4.js"></script>
+
+ </body></body>
